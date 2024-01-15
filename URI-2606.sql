@@ -2,4 +2,7 @@
 
 -- Seu chefe precisa que você exiba o código e o nome dos produtos, cuja categoria inicie com 'super'.
 
-SELECT 
+SELECT prd.id, prd.name from
+products prd INNER JOIN categories ctg ON
+prd.id_categories = ctg.id WHERE
+ctg.name like '%super%';
